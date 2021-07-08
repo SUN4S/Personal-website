@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -7,7 +9,7 @@ body {
   height: 100vh;
 }
 
-a, article{
+a, article {
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -31,7 +33,13 @@ nav.nav-bar {
   margin-right: 2rem;
 }
 
-.nav-bar button {
+.button-container {
+  display: flex;
+  margin: 3rem 0;
+  justify-content: space-around;
+}
+
+.button-container button {
   display: inline-block;
   text-decoration: none;
   padding:0.70em 2em;
@@ -47,7 +55,7 @@ nav.nav-bar {
   transition: all 0.2s;
 }
 
-.nav-bar button:hover {
+.button-container button:hover {
   color:#ffffff;
   background-color:#000000;
   cursor: pointer;
@@ -70,10 +78,19 @@ section.banner {
   width: 100%;
 }
 
+.banner h2 {
+  margin: 2rem auto;
+}
+
+.banner p {
+  text-align: justify;
+}
+
 header a {
   text-decoration: none;
   color: #000;
   padding-left: 2rem;
+  font-size: 0.65rem;
 }
 
 h1,
@@ -81,6 +98,7 @@ h2,
 h3{
   font-family: Montserrat;
 }
+
 
 main {
   grid-area: 2 / 2 / 4 / 5; 
@@ -91,15 +109,155 @@ main {
   color: #000;
 }
 
-.project {
-  display: inline-block;
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.project-list img {
-  box-sizing: border-box;
-  max-height: 500px;
+.project {
+  flex: 50%;
   max-width: 500px;
+  height: auto;  
+  min-width: 335px;
+  margin: 0;
+  padding: 0;
 }
+
+.thumbnail {
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+  flex: 50%;
+  max-width: 500px;
+  min-width: 335px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+  margin: 0;
+}
+
+.thumbnail:before,
+.thumbnail:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 48px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 48px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+  transform: scaleY(2);
+}
+
+.thumbnail img {
+  backface-visibility: hidden;
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.thumbnail figcaption {
+  position: absolute;
+  margin:0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  transition-delay: 0.1s;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.project-title {
+  color: #FFF;
+}
+
+.thumbnail:hover:before,
+.thumbnail:hover:after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.thumbnail:hover > img {
+  opacity: 0.7;
+}
+
+.thumbnail:hover figcaption {
+  opacity: 1;
+}
+
+/* The sidepanel menu */
+.sidepanel {
+  height: 100vh; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: #FFF; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 2rem; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 2rem;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 0;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
 
 /* Mobile optimization */
 
@@ -107,7 +265,7 @@ main {
 
 @media all and (max-width:30em) 
 {
-  nav button{
+  button{
     display: block;
     margin: 0.4em auto
    }
