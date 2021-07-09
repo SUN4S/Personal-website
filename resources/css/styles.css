@@ -75,7 +75,10 @@ section.banner {
 }
 
 .banner-container img {
-  width: 100%;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
 }
 
 .banner h2 {
@@ -217,30 +220,24 @@ main {
 
 /* The sidepanel menu */
 .sidepanel {
+  box-sizing: border-box;
   height: 100vh; /* Specify a height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 10; /* Stay on top */
   top: 0;
   right: 0;
-  background-color: #FFF; /* Black*/
+  background-color: #FFF; /* White */
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 2rem; /* Place content 60px from the top */
+  overflow-y: hidden;
+  padding: 2rem;
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  opacity: 0; /* Removes a bug where piece of the sidepanel is visible */
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidepanel a:hover {
   color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 2rem;
-  margin-left: 50px;
 }
 
 /* Style the button that is used to open the sidepanel */
@@ -253,14 +250,27 @@ main {
   border: none;
 }
 
-.openbtn:hover {
-  background-color: #444;
+/* sidepanel close button */
+.closeIcon img{
+  height: 2rem;
+  width: 2rem;
+}
+
+#preview {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#preview img {
+  display: block;
+  width: 500px;
+  margin: auto;
 }
 
 
 
 /* Mobile optimization */
-
 
 
 @media all and (max-width:30em) 

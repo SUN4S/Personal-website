@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="resources/css/styles.css">
-  <script src="resources/scripts/myscript.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -39,45 +38,48 @@
     </section>
   
     <main class="project-list">
-      <article id="project-1" class="project openbtn" onclick="openProject()">
-        <div class="thumbnail">
+      <article class="project" onclick="firstProject()">
+        <div class="thumbnail" >
           <img src="resources/img/fernando-hernandez-JdoofvUDUwc-unsplash.png" alt="">
-            <figcaption class="project-title">
+            <figcaption class="project-title" id="project-1">
               <h3>Project-1</h3>
             </figcaption>
         </div>
       </article>
-      <article id="project-2" class="project openbtn" onclick="openProject()">
+      <article class="project" onclick="secondProject()">
         <div class="thumbnail">
         <img src="resources/img/maxwell-nelson-taiuG8CPKAQ-unsplash.png" alt="">
-          <figcaption class="project-title">
+          <figcaption class="project-title" id="project-2">
             <h3>Project-2</h3>
           </figcaption>
         </div>
       </article>
-      <article id="project-3" class="project openbtn" onclick="openProject()">
+      <article class="project" onclick="thirdProject()">
         <div class="thumbnail">
           <img src="resources/img/pankaj-patel-u2Ru4QBXA5Q-unsplash.png" alt="">
-          <figcaption class="project-title">
+          <figcaption class="project-title" id="project-3">
             <h3>Project-3</h3>
           </figcaption>
         </div>
       </article>
-      <article id="project-3" class="project openbtn" onclick="openProject()">
+      <article class="project" onclick="fourthProject()">
         <div class="thumbnail">
         <img src="resources/img/pankaj-patel-u2Ru4QBXA5Q-unsplash.png" alt="">
-          <figcaption class="project-title">
-            <h3>Project-3</h3>
+          <figcaption class="project-title" id="project-4">
+            <h3>Project-4</h3>
           </figcaption>
         </div>
       </article>
     </main>
   </div>
   <div id="mySidepanel" class="sidepanel">
-    <button onclick="closeProject()">Close</button>
-    <h2>Project info</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit facilis amet ab quo, possimus nobis quos. Delectus fugit iusto reiciendis repellat praesentium enim quidem sequi unde facilis, voluptatum eveniet aperiam adipisci maxime officia assumenda, temporibus atque, repudiandae perspiciatis. Aspernatur fuga laudantium facere natus, ullam reiciendis quo? Quam, doloribus asperiores.</p>
-    <img src="resources/img/fernando-hernandez-JdoofvUDUwc-unsplash.png" alt="">
+    <a id="closeIcon" class="closeIcon" href="#" onclick="closeProject()"><img src="resources/icons/1110973_close_essential_set_x_icon.svg" alt=""></a>
+    <h2 id="projectTitle">Project info</h2>
+    <p id="projectDefinition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit facilis amet ab quo, possimus nobis quos. Delectus fugit iusto reiciendis repellat praesentium enim quidem sequi unde facilis, voluptatum eveniet aperiam adipisci maxime officia assumenda, temporibus atque, repudiandae perspiciatis. Aspernatur fuga laudantium facere natus, ullam reiciendis quo? Quam, doloribus asperiores.</p>
+    <div id="preview">
+      <img id="projectImage" src="#" alt="">
+    </div>
   </div>
 </body>
+  <script src="resources/scripts/myscript.js"></script>
 </html>
