@@ -10,6 +10,10 @@ body {
   height: 100vh;
 }
 
+body p {
+  text-align: justify;
+}
+
 a, article {
   margin: 0;
   padding: 0;
