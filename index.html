@@ -28,12 +28,14 @@
     <section class="banner">
       <div class="banner-container">
         <img src="resources/img/fernando-hernandez-JdoofvUDUwc-unsplash.png" alt="">
-        <h2>About me</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque velit architecto magni tempora esse, dolore doloribus saepe nam laborum quibusdam ipsa fugit illum eligendi enim, odio rerum ea. Labore quaerat, error velit, quae debitis ratione minus ut doloremque iste nobis perferendis! Dolorem eaque tempore nemo illo nostrum suscipit, vel maxime?</p>
-        <div class="button-container">
-          <button class="certificates">Certificates</button>
-          <button class="resume">Resume</button>
-          <button class="contact">Contact Me</button>
+        <div id="aboutMe">
+          <h2>About me</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque velit architecto magni tempora esse, dolore doloribus saepe nam laborum quibusdam ipsa fugit illum eligendi enim, odio rerum ea. Labore quaerat, error velit, quae debitis ratione minus ut doloremque iste nobis perferendis! Dolorem eaque tempore nemo illo nostrum suscipit, vel maxime?</p>
+          <div class="button-container">
+            <button id="certificates">Certificates</button>
+            <button id="resume">Resume</button>
+            <button id="contact">Contact Me</button>
+          </div>
         </div>
       </div>
     </section>
@@ -106,27 +108,52 @@
     </main>
   </div>
   <div id="mySidepanel" class="sidepanel">
-    <a id="closeIcon" class="closeIcon" href="#" onclick="closeProject()"><img src="resources/icons/1110973_close_essential_set_x_icon.svg" alt=""></a>
-    <h2 id="projectTitle">Project info</h2>
-    <div class="projectContainer">
-      <p id="projectDefinition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit facilis amet ab quo, possimus nobis quos. Delectus fugit iusto reiciendis repellat praesentium enim quidem sequi unde facilis, voluptatum eveniet aperiam adipisci maxime officia assumenda, temporibus atque, repudiandae perspiciatis. Aspernatur fuga laudantium facere natus, ullam reiciendis quo? Quam, doloribus asperiores.</p>
-    <div class="sideContent">
-        <ul id="langUsed">
-          <li>placeholder</li>
-        </ul>
-        <div class="previewButtonContainer" id="previewButtonContainer">
-          <a id="livePreviewLink" target="_blank" href="#">
-            <button id="livePreview" type="button">Preview</button>
-          </a>
-          <a id="githubLink" target="_blank" href="#">
-            <button id="github" type="button">Github</button>
-          </a>
+      <a id="closeIcon" class="closeIcon" href="#""><img src="resources/icons/1110973_close_essential_set_x_icon.svg" alt=""></a>
+      <h2 id="panelTitle">Project info</h2>
+    <article id="projectPanel">
+      <div class="projectContainer">
+        <p id="projectDefinition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit facilis amet ab quo, possimus nobis quos. Delectus fugit iusto reiciendis repellat praesentium enim quidem sequi unde facilis, voluptatum eveniet aperiam adipisci maxime officia assumenda, temporibus atque, repudiandae perspiciatis. Aspernatur fuga laudantium facere natus, ullam reiciendis quo? Quam, doloribus asperiores.</p>
+        <div class="sideContent">
+            <ul id="langUsed">
+              <li>placeholder</li>
+            </ul>
+            <div class="previewButtonContainer" id="previewButtonContainer">
+              <a id="livePreviewLink" target="_blank" href="#">
+                <button id="livePreview" type="button">Preview</button>
+              </a>
+              <a id="githubLink" target="_blank" href="#">
+                <button id="github" type="button">Github</button>
+              </a>
+            </div>
         </div>
-    </div>
-    </div>
-    <div id="preview">
-      <img id="projectImage" src="#" alt="">
-    </div>
+      </div>
+      <div id="preview">
+        <img id="projectImage" src="#" alt="">
+      </div>
+    </article>
+    <article id="certContainer">
+      <p id="certText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aliquid minus, deserunt corporis quibusdam debitis, itaque sequi ducimus reprehenderit maiores nisi cupiditate iusto veritatis. Dolorem magnam veritatis numquam facilis architecto quod qui a debitis quia repellat velit sunt, hic delectus omnis doloribus ipsum reprehenderit illo laboriosam accusantium magni sint aspernatur.</p>
+      <a href="resources/img/fernando-hernandez-JdoofvUDUwc-unsplash.png" target="_blank"><img src="resources/img/fernando-hernandez-JdoofvUDUwc-unsplash.png" alt="1st cert"></a>
+      <a href="resources/img/maxwell-nelson-taiuG8CPKAQ-unsplash.png" target="_blank"><img src="resources/img/maxwell-nelson-taiuG8CPKAQ-unsplash.png" alt="2nd cert"></a>
+    </article>
+    <article id="resumeContainer">
+      <p id="resumeText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aliquid minus, deserunt corporis quibusdam debitis, itaque sequi ducimus reprehenderit maiores nisi cupiditate iusto veritatis. Dolorem magnam veritatis numquam facilis architecto quod qui a debitis quia repellat velit sunt, hic delectus omnis doloribus ipsum reprehenderit illo laboriosam accusantium magni sint aspernatur.</p>
+      <a href="resources/img/pankaj-patel-u2Ru4QBXA5Q-unsplash.png" target="_blank"><img src="resources/img/pankaj-patel-u2Ru4QBXA5Q-unsplash.png" alt="resume"></a>
+    </article>
+    <article id="contactContainer">
+      <form action="#" id="contactForm">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+    
+        <label for="email">Email</label>
+        <input type="email" id="email" name="emailAdress" placeholder="Your Email...">
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>   
+        <button type="submit" form="contaceForm" value="Submit"> Submit</button>
+      </form>
+    </article>
   </div>
 </body>
   <script src="resources/scripts/myscript.js"></script>
