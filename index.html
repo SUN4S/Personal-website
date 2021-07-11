@@ -12,7 +12,8 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="grid-container">
+  <div id="overlay"></div>
+  <div id="grid-container">
 
     <header>
       <a href=""><h1>Marius Gliaudelis</h1></a>   
@@ -113,9 +114,13 @@
         <ul id="langUsed">
           <li>placeholder</li>
         </ul>
-        <div class="previewButtonContainer">
-          <button id="livePreview" type="button">Preview</button>
-          <button id="github" type="button">Github</button>
+        <div class="previewButtonContainer" id="previewButtonContainer">
+          <a id="livePreviewLink" target="_blank" href="#">
+            <button id="livePreview" type="button">Preview</button>
+          </a>
+          <a id="githubLink" target="_blank" href="#">
+            <button id="github" type="button">Github</button>
+          </a>
         </div>
     </div>
     </div>
@@ -124,6 +129,5 @@
     </div>
   </div>
 </body>
-  <script src="resources/scripts/data.json"></script>
   <script src="resources/scripts/myscript.js"></script>
 </html>
