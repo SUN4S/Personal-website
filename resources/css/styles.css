@@ -603,25 +603,6 @@ input[type=text], input[type=email], textarea {
     grid-area: 3 / 1 / 4 / 2; 
   }
 
-  .button-container button,
-  .previewButtonContainer button,
-  #contactContainer button {
-    display: inline-block;
-    text-decoration: none;
-    padding:0.75em 1.5em;
-    border:0.1em solid #000000;
-    border-radius:0.12em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    font-size: 0.75rem;
-    background-color: #ffffff;
-    color:#000000;
-    text-align:center;
-    transition: all 0.2s;
-  }
-
   .projectContainer {
     text-align: justify;
     display: block;
@@ -678,25 +659,6 @@ input[type=text], input[type=email], textarea {
 
   main {
     grid-area: 3 / 1 / 4 / 2; 
-  }
-
-  .button-container button,
-  .previewButtonContainer button,
-  #contactContainer button {
-    display: inline-block;
-    text-decoration: none;
-    padding:0.75em 1.5em;
-    border:0.1em solid #000000;
-    border-radius:0.12em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    font-size: 0.75rem;
-    background-color: #ffffff;
-    color:#000000;
-    text-align:center;
-    transition: all 0.2s;
   }
 
   .projectContainer {
